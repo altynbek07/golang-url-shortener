@@ -1,10 +1,9 @@
 package link
 
-type CreateResponse struct {
+type LinkCreateResponse struct {
 	Token string `json:"token"`
 }
 
-type CreateRequest struct {
-	Email    string `json:"email" validate:"required,email"`
-	Password string `json:"password" validate:"required"`
+type LinkCreateRequest struct {
+	Url string `json:"url" validate:"required,url"`
 }

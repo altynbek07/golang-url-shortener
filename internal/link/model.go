@@ -14,7 +14,7 @@ type Link struct {
 
 var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
-func NewLetter(url string) *Link {
+func NewLink(url string) *Link {
 	return &Link{
 		Url:  url,
 		Hash: randStringRunes(6),

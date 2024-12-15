@@ -27,17 +27,25 @@ func NewLinkHandler(router *http.ServeMux, deps LinkHandlerDeps) {
 
 func (handler *LinkHandler) Create() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		body, err := req.HandleBody[CreateRequest](w, r)
+		body, err := req.HandleBody[LinkCreateRequest](w, r)
 
 		if err != nil {
 			return
 		}
 
-		fmt.Println(body)
-		data := CreateResponse{
-			Token: "1234",
+		link := NewLink(body.Url)
+
+		createdLink, err := handler.LinkRepository.Create(link)
+
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
 		}
-		res.Json(w, data, 200)
+
+		// data := LinkCreateResponse{
+		// 	Token: "1234",
+		// }
+		res.Json(w, createdLink, http.StatusCreated)
 	}
 }
 
