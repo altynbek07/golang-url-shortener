@@ -137,7 +137,6 @@ func (handler *LinkHandler) GoTo() http.HandlerFunc {
 			Type: event.EventLinkVisited,
 			Data: link.ID,
 		})
-		// handler.StatRepository.AddClick(link.ID)
 
 		http.Redirect(w, r, link.Url, http.StatusTemporaryRedirect)
 	}
