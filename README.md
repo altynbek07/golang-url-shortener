@@ -53,6 +53,7 @@ This project is a URL shortening service developed in Go (Golang). Its primary p
 
    This will deploy the application along with required services like the database.
 
+
 ## Project Structure
 
 - **cmd**: Contains the entry point for the application.
@@ -62,20 +63,6 @@ This project is a URL shortening service developed in Go (Golang). Its primary p
 - **pkg**: Shared packages used across the application.
 
 
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-This project is inspired by other Go URL shortening implementations, such as [mxschmitt/golang-url-shortener](https://github.com/mxschmitt/golang-url-shortener) and [Furkan-Gulsen/golang-url-shortener](https://github.com/Furkan-Gulsen/golang-url-shortener).
-
-## Learning Resources
-
-If you wish to learn more about building a URL shortener service in Go, check out these resources:
-
-- [How to build a URL Shortener with Go](https://dev.to/envitab/how-to-build-a-url-shortener-with-go-5hn5)
-- [Making a URL Shortener in Go - Pt.1 - Introduction to the project](https://www.youtube.com/watch?v=tBXeKa635S8)
-
-These materials provide step-by-step guidance and explanations for creating similar services.
